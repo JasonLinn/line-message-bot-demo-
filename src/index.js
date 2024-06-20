@@ -13,22 +13,36 @@ const bot = new linebot({
 bot.on('message', async event => {
   let msg = {
     "type": "imagemap",
-    "baseUrl": "https://line-message-bot-demo.onrender.com/statics/flight",
-    "altText": "航班資訊",
+    "baseUrl": "https://line-message-bot-demo.onrender.com/statics/cat",
+    "altText": "貓貓",
     "baseSize": {
       "width": 1040,
-      "height": 800
+      "height": 1040
+    },
+     "video": {
+        "originalContentUrl": "https://line-message-bot-demo.onrender.com/statics/video.mp4",
+        "previewImageUrl": "https://line-message-bot-demo.onrender.com/statics/videoPreview.jpg",
+        "area": {
+            "x": 520,
+            "y": 0,
+            "width": 520,
+            "height": 1040
+        },
+        "externalLink": {
+            "linkUri": "https://example.com/see_more.html",
+            "label": "查看更多貓貓"
+        }
     },
     "actions": [
       {
         "type": "message",
         "area": {
-          "x": 584,
-          "y": 613,
-          "width": 456,
-          "height": 187
+          "x": 0,
+          "y": 0,
+          "width": 520,
+          "height": 1040
         },
-        "text": "航班資訊"
+        "text": "貓貓"
       }
     ]
   }
