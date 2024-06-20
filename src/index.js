@@ -13,7 +13,7 @@ const bot = new linebot({
 bot.on('message', async event => {
   let msg = {
     "type": "imagemap",
-    "baseUrl": "https://c989ee6a.ngrok.io/statics/flight",
+    "baseUrl": "https://line-message-bot-demo.onrender.com/statics/flight",
     "altText": "航班資訊",
     "baseSize": {
       "width": 1040,
