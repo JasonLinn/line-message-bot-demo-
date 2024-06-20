@@ -12,39 +12,25 @@ const bot = new linebot({
 // 程式碼都寫在下面這個區塊內
 bot.on('message', async event => {
   let msg = {
-    "type": "imagemap",
-    "baseUrl": "https://line-message-bot-demo.onrender.com/statics/cat",
-    "altText": "貓貓",
-    "baseSize": {
-      "width": 1040,
-      "height": 1040
-    },
-     "video": {
-        "originalContentUrl": "https://line-message-bot-demo.onrender.com/statics/video.mp4",
-        "previewImageUrl": "https://line-message-bot-demo.onrender.com/statics/videoPreview.jpg",
-        "area": {
-            "x": 520,
-            "y": 0,
-            "width": 520,
-            "height": 1040
-        },
-        "externalLink": {
-            "linkUri": "https://example.com/see_more.html",
-            "label": "查看更多貓貓"
-        }
-    },
-    "actions": [
-      {
-        "type": "message",
-        "area": {
-          "x": 0,
-          "y": 0,
-          "width": 520,
-          "height": 1040
-        },
-        "text": "貓貓"
+    "type": "flex",
+    "altText": "this is a flex message",
+    "contents": {
+      "type": "bubble",
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "hello"
+          },
+          {
+            "type": "text",
+            "text": "world"
+          }
+        ]
       }
-    ]
+    }
   }
   event.reply(msg)
 })
