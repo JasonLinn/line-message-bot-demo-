@@ -11,6 +11,7 @@ const bot = new linebot({
 })
 // 程式碼都寫在下面這個區塊內
 bot.on('message', async event => {
+  console.log(bot, 'bbbb', event, 'eeeee')
   let msg = {
     "type": "flex",
     "altText": "this is a flex message",
